@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+
+        function insert(array,element,posisan) {
+
+            if (posisan < 0 || posisan > array.length) {
+                console.log('posisan out of bondej');
+            }
+
+            var newArray = new Array(array.length+1)
+
+            for (let i = 0; i < posisan; i++) {
+                newArray[i] = array[i]
+            }
+
+            newArray[posisan] = element
+
+            for (let i = posisan; i < array.length; i++) {
+                newArray[i+1] = array[i]
+            }
+            
+            return newArray;
+        }
+
+
+    var array = [1,2, 3, 5, 6];
+    var element = 4;
+    var posisan = 3;
+
+    var reselt = insert(array, element, posisan)
+    console.log(reselt);
+
+      
+        
+    </script>
+</body>
+</html>
